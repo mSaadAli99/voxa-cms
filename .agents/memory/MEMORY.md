@@ -1,0 +1,1 @@
+- [VOXA API contract](voxa-api-contract.md) — keep OpenAPI schemas compatible with the workspace's generated Zod runtime when adding CMS fields.

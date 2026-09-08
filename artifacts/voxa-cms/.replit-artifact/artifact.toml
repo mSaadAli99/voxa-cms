@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "VOXA CMS"
+description = "A dark, polished admin workspace for managing VOXA marketing content, products, solutions, sections, and media with mock-backed CRUD flows."
+version = "1.0.0"
+id = "artifacts/voxa-cms"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22607
+
+[services.development]
+run = "pnpm --filter @workspace/voxa-cms run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/voxa-cms", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/voxa-cms/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22607"
+BASE_PATH = "/"
