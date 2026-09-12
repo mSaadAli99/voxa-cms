@@ -1,9 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "pnpm install",
-  "buildCommand": "pnpm --filter @workspace/voxa-cms run build",
-  "outputDirectory": "artifacts/voxa-cms/dist",
+  "installCommand": "cd ../.. && pnpm install",
+  "buildCommand": "cd ../.. && pnpm --filter @workspace/voxa-cms run build",
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
