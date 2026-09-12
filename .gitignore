@@ -4,8 +4,7 @@
 atlas-credentials.env
 node_modules
 **/node_modules/
-dist
-**/dist/
+artifacts/api-server/dist/
 .tsbuildinfo
 **/.tsbuildinfo
 .DS_Store
